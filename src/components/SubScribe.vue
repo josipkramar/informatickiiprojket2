@@ -57,14 +57,6 @@ export default {
         password: { required, minLength: minLength(2), maxLength: maxLength(2) }
 },
     mounted: function () {
-        var v = this;
-        v.$http.get(`http://localhost:4600/countries`)
-            .then(function (resp) {
-                v.countryList = resp.data;
-            })
-            .catch(function (err) {
-                console.log(err)
-            });
     },
     methods: {
         resetData: function () {
